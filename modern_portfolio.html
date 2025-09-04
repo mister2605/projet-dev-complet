@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Martin - Portfolio Personnel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Alex Martin</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Je suis <span class="highlight">Alex Martin</span><br>Développeur Web en devenir</h1>
+                <p class="hero-description">Passionné par le développement web et le design, je crée des expériences numériques modernes et intuitives.</p>
+                <button class="cta-button" onclick="navigateToContact()">Me Contacter</button>
+            </div>
+            <div class="hero-image">
+                <div class="workspace-illustration">
+                    <div class="code-icon">💻</div>
+                    <div class="floating-elements">
+                        <div class="element element-1">HTML</div>
+                        <div class="element element-2">CSS</div>
+                        <div class="element element-3">JS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos (aperçu) -->
+    <section class="about-preview">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="profile-image-container">
+                    <img src="https://via.placeholder.com/200x200/20c997/ffffff?text=AM" alt="Alex Martin" class="profile-image">
+                </div>
+                <div class="about-text">
+                    <p>Étudiant en développement web passionné par la création d'interfaces utilisateur modernes et intuitives.</p>
+                    <p>Je me spécialise dans les technologies front-end et j'apprends continuellement de nouvelles compétences pour créer des expériences web exceptionnelles.</p>
+                    <a href="apropos.html" class="read-more-btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences (aperçu) -->
+    <section class="skills-preview">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML/CSS</h3>
+                    <p>Structure et stylisation de pages web responsives</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Programmation interactive et dynamique</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design UI/UX</h3>
+                    <p>Création d'interfaces utilisateur attrayantes</p>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="competences.html" class="view-all-btn">Voir toutes mes compétences</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets (aperçu) -->
+    <section class="projects-preview">
+        <div class="container">
+            <h2 class="section-title">Mes Projets Récents</h2>
+            <div class="projects-grid">
+                <div class="project-card" onmouseover="highlightProject(this)" onmouseout="unhighlightProject(this)">
+                    <div class="project-image">
+                        <div class="project-placeholder">🛒</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Site E-commerce</h3>
+                        <p>Site de vente en ligne avec panier d'achat interactif</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onmouseover="highlightProject(this)" onmouseout="unhighlightProject(this)">
+                    <div class="project-image">
+                        <div class="project-placeholder">📱</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Application Todo</h3>
+                        <p>Application de gestion de tâches avec stockage local</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">LocalStorage</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="projets.html" class="view-all-btn">Voir tous mes projets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact (aperçu) -->
+    <section class="contact-preview">
+        <div class="container">
+            <h2 class="section-title">Restons en Contact</h2>
+            <div class="contact-info">
+                <p>Vous avez un projet en tête ou souhaitez en savoir plus sur mon travail ?</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>alex.martin@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+33 6 12 34 56 78</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Paris, France</span>
+                    </div>
+                </div>
+                <a href="contact.html" class="contact-cta-btn">Formulaire de contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Alex Martin - Portfolio Personnel. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* ===== STYLES CSS ===== */
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #20c997;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12rem 0 8rem;
+    margin-top: 80px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #20c997;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.cta-button {
+    background: #20c997;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #17a085;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(32, 201, 151, 0.3);
+}
+
+/* ===== WORKSPACE ILLUSTRATION ===== */
+.workspace-illustration {
+    width: 400px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-icon {
+    font-size: 4rem;
+    z-index: 2;
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.element {
+    position: absolute;
+    background: rgba(32, 201, 151, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: float 3s ease-in-out infinite;
+}
+
+.element-1 {
+    top: 20px;
+    right: 30px;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    bottom: 30px;
+    left: 30px;
+    animation-delay: 1s;
+}
+
+.element-3 {
+    top: 50%;
+    right: 20px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== SECTIONS COMMUNES ===== */
+.section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #20c997;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* ===== SECTION À PROPOS ===== */
+.about-preview {
+    padding: 8rem 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-image-container {
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #20c997;
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(32, 201, 151, 0.3);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.read-more-btn {
+    background: #20c997;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.read-more-btn:hover {
+    background: #17a085;
+    transform: translateY(-2px);
+}
+
+/* ===== SECTION COMPÉTENCES ===== */
+.skills-preview {
+    padding: 8rem 0;
+    background: #f8f9fa;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.skill-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== SECTION PROJETS ===== */
+.projects-preview {
+    padding: 8rem 0;
+    background: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-placeholder {
+    font-size: 4rem;
+    color: white;
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: #20c997;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ===== BOUTONS VOIR TOUT ===== */
+.view-all-container {
+    text-align: center;
+}
+
+.view-all-btn {
+    background: transparent;
+    color: #20c997;
+    padding: 12px 25px;
+    border: 2px solid #20c997;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-all-btn:hover {
+    background: #20c997;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== SECTION CONTACT ===== */
+.contact-preview {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.contact-preview .section-title {
+    color: white;
+}
+
+.contact-preview .section-title::after {
+    background: #20c997;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.contact-cta-btn {
+    background: #20c997;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-cta-btn:hover {
+    background: #17a085;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(32, 201, 151, 0.3);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #20c997;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .workspace-illustration {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// ===== JAVASCRIPT POUR L'INTERACTIVITÉ =====
+
+// Navigation vers la page de contact
+function navigateToContact() {
+    window.location.href = 'contact.html';
+}
+
+// Effet de survol sur les projets
+function highlightProject(element) {
+    element.style.transform = 'translateY(-10px) scale(1.02)';
+    element.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)';
+    
+    // Animation des tags technologiques
+    const techTags = element.querySelectorAll('.tech-tag');
+    techTags.forEach((tag, index) => {
+        setTimeout(() => {
+            tag.style.transform = 'scale(1.1)';
+            tag.style.background = '#17a085';
+        }, index * 100);
+    });
+}
+
+function unhighlightProject(element) {
+    element.style.transform = 'translateY(0) scale(1)';
+    element.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+    
+    // Retour à l'état normal des tags
+    const techTags = element.querySelectorAll('.tech-tag');
+    techTags.forEach(tag => {
+        tag.style.transform = 'scale(1)';
+        tag.style.background = '#20c997';
+    });
+}
+
+// Animation d'apparition au scroll
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.skill-card, .project-card, .contact-item');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+}
+
+// Initialiser les animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Préparer les éléments pour l'animation
+    const animatedElements = document.querySelectorAll('.skill-card, .project-card, .contact-item');
+    animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // Déclencher l'animation initiale
+    setTimeout(animateOnScroll, 100);
+});
+
+// Écouter le scroll pour les animations
+window.addEventListener('scroll', animateOnScroll);
+
+// Effet sur le header au scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(102, 126, 234, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        header.style.backdropFilter = 'none';
+    }
+});
+
+// Messages de console pour le débogage
+console.log('Portfolio chargé avec succès !');
+console.log('JavaScript actif - Toutes les interactions sont fonctionnelles');
+
+// Validation simple pour les liens (éviter les erreurs 404 en développement)
+document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' && e.target.href.includes('.html')) {
+        const href = e.target.getAttribute('href');
+        if (href !== 'index.html') {
+            e.preventDefault();
+            alert(`Navigation vers : ${href}\n\nNote : Cette page sera créée dans les étapes suivantes du projet.`);
+        }
+    }
+});
+</script>

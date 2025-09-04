@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Triangle étoiles</title>
+</head>
+<body>
+  <h2>Triangle d'étoiles</h2>
+  <script>
+    let hauteur = Number(prompt("Entrez la hauteur du triangle :"));
+    for (let i = 1; i <= hauteur; i++) {
+      let ligne = "";
+      for (let j = 1; j <= (2 * i - 1); j++) {
+        ligne += "*";
+      }
+      document.write(ligne + "<br>");
+    }
+  </script>
+</body>
+</html>
